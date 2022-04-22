@@ -1,0 +1,33 @@
+.nav {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4rem;
+    display: block;
+    background-color: black;
+    z-index: 100;
+}
+
+.nav_menu {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 2rem;
+}
+
+.nav_item {
+    list-style-type: none;
+    padding: 0 2rem;
+    
+}
+
+.nav_links {
+    text-decoration: none;
+    font-weight: 100;
+    color: #f8f8f8;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}

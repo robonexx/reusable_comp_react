@@ -1,50 +1,22 @@
 import React from 'react';
-import QA from './components/Q&A/QA';
+import { Routes, Route } from 'react-router-dom';
+import Nav from './components/nav/Nav';
 import styles from './styles/App.module.css';
+import Home from './pages/Home';
+import Components from './pages/Components';
 
 function App() {
   return (
     <div className={styles.App}>
+      <Nav />
       <div className={styles.main}>
-        <h1>Reusable Components</h1>
-        <div>
-          <h2>Q & A component</h2>
-          {/* So here we are using the QA compoenent in map function looping thru the array of objects with q's and a's that are then sent as props to the components */}
-          {qa.map(({ id, q, a }) => (
-          <li key={id}>
-              <QA title={q} desc={a}/>
-          </li>
-          ))}
-          
-        </div>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/components' element={<Components />} />
+        </Routes>
       </div>
     </div>
   );
 }
 
 export default App;
-
-// testing the qa component with these object will map thru them using the QandA component
-
-export const qa = [
-  {
-    q: 'What is HTML?',
-    a: 'Hypertext Markup language, The markup language that is used to structure web content',
-    id: 1,
-  },
-  {
-    q: 'What is React?',
-    a: 'A frontend libarary for building web applications, user interfaces UI, used for building components',
-    id: 2,
-  },
-  {
-    q: 'What is Javascript?',
-    a: 'JavaScript is a scripting or programming language that allows you to implement complex features on web pages',
-    id: 3,
-  },
-  {
-    q: 'What is Css?',
-    a: 'Cascading style sheets - i a language that is used to give styling to our HTML, web content.',
-    id: 4,
-  },
-];

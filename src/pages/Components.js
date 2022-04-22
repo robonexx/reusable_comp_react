@@ -1,15 +1,58 @@
-import React from 'react';
+import React, { useState } from 'react';
 import QA from '../components/Q&A/QA';
 import Slider from '../components/Slider/Slider';
+import Modal from '../components/modal/Modal';
+
+// styles & motion
+import { motion } from 'framer-motion';
 import styles from '../styles/App.module.css';
 
+const ModalContent = () => (
+  <>
+    <div
+      style={{
+        width: '400px',
+        height: '300px',
+        background: 'transparent',
+        color: '#f8f8f8',
+        display: 'block',
+      }}
+    >
+      <h1>Some modal content</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit eligendi
+        ducimus libero assumenda incidunt est nulla a quaerat blanditiis
+        pariatur.
+      </p>
+    </div>
+  </>
+);
 
 export default function Components() {
+  const [modalOpen, setModalOpen] = useState(false);
 
-
+  const close = () => setModalOpen(false);
+  const open = () => setModalOpen(true);
 
   return (
     <div className={styles.components}>
+      <div className={styles.components_wrapper}>
+        <motion.button
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          className='btn'
+          onClick={() => (modalOpen ? close() : open())}
+        >
+          Open form
+        </motion.button>
+        {modalOpen && (
+          <Modal
+            modalOpen={modalOpen}
+            handleClose={close}
+            content={<ModalContent />}
+          ></Modal>
+        )}
+      </div>
       <div className={styles.components_wrapper}>
         <h2>Q & A component</h2>
         {/* So here we are using the QA compoenent in map function looping thru the array of objects with q's and a's that are then sent as props to the components */}
@@ -18,10 +61,10 @@ export default function Components() {
             <QA title={q} desc={a} />
           </li>
         ))}
-          </div>
-          <div className={styles.components_wrapper}>
-              <Slider />
-          </div>
+      </div>
+      <div className={styles.components_wrapper}>
+        <Slider />
+      </div>
     </div>
   );
 }
@@ -48,5 +91,3 @@ export const qa = [
     id: 4,
   },
 ];
-
-

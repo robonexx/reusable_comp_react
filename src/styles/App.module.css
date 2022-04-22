@@ -1,0 +1,24 @@
+.App {
+    margin: 0 auto;
+    height: 100%;
+    max-width: 1000px;
+    background: #f8f8f8;
+}
+
+
+.main {
+    min-height: 100vh;
+    padding: 2rem 5rem;
+    
+}
+
+.main h1 {
+    font-size: 3rem;
+    text-align: center;
+}
+
+.main h2 {
+    font-size: 2rem;
+    text-align: center;
+    color: #888;
+}

@@ -23,7 +23,13 @@ a {
 }
 
 
- 
+ .thumbs-wrapper {
+     width: 100%;
+     display: flex !important;
+     justify-content: space-between !important;
+ }
 .thumbs-wrapper .thumb {
-    height: 200px;
+    width: fit-content;
+    height: 50px;
+    
 }

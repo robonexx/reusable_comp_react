@@ -18,11 +18,11 @@ const navItems = [
   },
   {
     title: 'page3',
-    url: '/',
+    url: '/page3',
   },
   {
     title: 'page4',
-    url: '/',
+    url: '/page4',
   },
   {
     title: 'contact',

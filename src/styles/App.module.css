@@ -7,7 +7,7 @@
 
 .main {
     margin: 0 auto;
-    max-width: 1000px;
+    max-width: 80%;
     min-height: calc(100vh - 4rem);
     padding: 0 5rem;
     background-color: #e8a87c;

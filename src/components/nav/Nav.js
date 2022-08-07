@@ -52,6 +52,7 @@ export default function Nav() {
               </Link>
             </motion.li>
           ))}
+          
         </ul>
       </nav>
     </>

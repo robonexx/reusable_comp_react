@@ -1,8 +1,9 @@
 import React from 'react';
 import {motion} from 'framer-motion'
+import { NavContent } from './NavContent';
 
 import './Navb.scss';
-
+/* 
 const list = [
   {
     title: 'THIS IS HIP-HOP',
@@ -28,7 +29,7 @@ const list = [
     title: '2020... Cash is King',
     newtitle: '- Money, Money'
   },
-];
+]; */
 
 export default function NavBar(props) {
   return (
@@ -37,19 +38,18 @@ export default function NavBar(props) {
        
       </div>
       <span className='custom_btn'>
-        <a href='/'>Back</a>
+        <a href='/'>Home</a>
       </span>
       <ul>
-        {list.map((l, i) => (          
+        {NavContent.map((l, i) => (          
             <motion.li
             key={i}
              initial={{ opacity: 0, y: i % 2 === 0 ? -100 : 100 }}
              animate={{ opacity: 1, y: 0 }}
              transition={{ duration: 1, delay: i * 0.1 }}>
-              <p  data-text={l.title  + l.newtitle}>{l.title}</p>
+              <a href={l.url} data-text={l.title  + l.newtitle}>{l.title}</a>
             </motion.li>
         ))}
-       {/*  {props.children} */}
       </ul>
     </div>
   );

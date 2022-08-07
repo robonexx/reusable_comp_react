@@ -1,9 +1,14 @@
 .nav {
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
     width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
+    overflow-x: hidden;
+
 
     .nbbg {
     position: absolute;
@@ -32,27 +37,27 @@
             > li {
                  position: relative;
                  width: 100%;
-                 padding: 2rem 0;
+                 padding: 1rem 0;
                  overflow: hidden;
                  font-family: 'Audiowide', cursive;
-                 line-height: 8rem;
+                 line-height: 4.5rem;
                  display: flex;
                  align-items: center;
                  justify-content: flex-start;
-                 padding: 1rem 2rem;
                  background: #ee3e4e;
+                 border-bottom: 1px solid black;
      
              &:hover {
                  background: transparent;
              }
                
-                 >p {
+                 >a {
                     padding-left: 5vw;
-                     font-size: 4rem;
+                     font-size: 2rem;
                      color: transparent;
                      -webkit-text-stroke: 1px black;
                      @media screen and (max-width: 768px) {
-                         font-size: 3rem;
+                         font-size: 2rem;
                      }
      
                      &::before {

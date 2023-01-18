@@ -9,7 +9,8 @@ export default function Page3() {
     <div className={styles.page3}>
         <h2>Some buttons and such</h2>
         <div className={styles.content}>
-            <Button variant='alt'>Some title</Button>
+            <Button variant='default'>Create now</Button>
+            <Button variant='light'>BUY NOW</Button>
         </div>
     </div>
   )

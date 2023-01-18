@@ -18,7 +18,7 @@ const dropIn = {
     opacity: '1',
     transition: {
       delay: 0.2,
-      duration: 2,
+      duration: 0.4,
       ease: [0.17, 0.67, 0.83, 0.67],
       type: 'spring',
       damping: 50,
@@ -29,8 +29,7 @@ const dropIn = {
     opacity: 0,
     scale: 0,
     transition: {
-      duration: 1,
-      delay: 1,
+      duration: 0.3,
     },
   },
 };
@@ -49,7 +48,7 @@ const Modal = ({ handleClose, content }) => {
       >
         <button
           onClick={handleClose}
-          className={`${styles.btn} ${styles.close_btn}`}
+          className={`${styles.modal_btn} ${styles.close_btn}`}
         >
           <FiX />
         </button>

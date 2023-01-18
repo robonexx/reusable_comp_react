@@ -19,3 +19,32 @@ background-color: peru;
     align-items: center;
     justify-content: center;
 }
+
+
+.form {
+    padding: 4rem 2rem;
+    width: 480px;
+    height: 520px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    background-color: #2B2B2A;
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(1.2rem 1.5vw, 1.6rem);
+}
+
+.form > p {
+    color: #FFFFFF;
+    margin-bottom: 4rem;
+}
+
+.form > p > input {
+    width: 40%;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    color: #FFFFFF;
+    border-bottom: 1px solid #888;
+}
